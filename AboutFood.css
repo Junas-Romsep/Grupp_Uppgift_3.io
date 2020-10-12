@@ -1,0 +1,567 @@
+body {
+    background-color:rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* header */
+
+a{
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color:transparent;
+}
+
+.nav-container {
+    width: 1280px;
+    margin: auto;
+}
+
+.nav-checkbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.tab-nav {
+    outline: none;
+    display: none;
+}
+
+.tab-nav-label {
+    display: none;
+    background-color: transparent;
+}
+
+.tab-content {
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-content li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.tab-content li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.tab-content li a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+
+.tab-content li a:hover::before {
+    transform: scale(1, 1);
+}
+
+.tab-content li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0,1);
+    transition: transform ease-in-out 500ms;
+}
+
+.tab-content li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* content */
+
+@media screen and (max-width: 1280px) {
+    .nav-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tab-nav-label {
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+
+    .tab-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.4s;
+        -o-transition: all ease-in-out 0.4s;
+        -webkit-transition: all ease-in-out 0.4s;
+    }
+
+    .nav-checkbox input:checked ~ .tab-content {
+        max-height: 400px;
+    }
+
+    .tab-content li {
+        padding: 10px 0;
+    }
+}
+
+/* header */
+
+#bk-clr {
+    /* background: -webkit-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
+  background: -o-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
+  background: -moz-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%); */
+  background: linear-gradient(180deg, #ffffff 60%, #2e446e 60%)
+}
+
+.wrapper{ 
+    box-shadow: 0 15px 17px -9px black;
+
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns:1fr 2.5fr 1fr 1fr;
+
+    grid-template-rows: 0.5fr 2.5fr 1.2fr 01fr;
+
+    grid-template-areas: 
+    "food-name food-name food-name food-name" 
+    "side-img side-img text-1 text-1" 
+    "side-img side-img text-1 text-1"
+    "down-img down-img down-img down-img";
+    grid-gap: 15px;
+
+    /* FONT FAMILY */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+
+}
+
+/* COLOR: */
+
+h1{
+    text-decoration: underline;
+    font-family: Quicksand; font-size: 50px; 
+    font-style: normal; font-variant: normal; 
+    font-weight: 1000; line-height: 50px; 
+    
+}
+
+p{
+    font-weight: 25px;
+}
+
+.food-name{
+    grid-area: food-name;
+
+    text-align: center;
+}
+
+.side-img {
+
+    box-shadow: 0 12px 9px -9px black;
+    
+    background-image: url("tomyum2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100%;
+    grid-area: side-img;
+
+    border-radius: 10px;
+}
+
+.text-1 {
+    
+    
+    grid-area: text-1;
+
+    border-radius: 10px;
+}
+
+.text-about {
+    background-color: transparent;
+
+    /* box-shadow: 0 12px 9px -9px black; */
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* COLOR */
+
+@media only screen and (max-width: 500px){
+    .wrapper, body{
+        grid-gap: 5px;
+
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+
+        height: 100vh;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
+        grid-template-areas:
+        "food-name"
+        "side-img"
+        "text-1"
+        "down-img";
+    }
+} 
+
+#bk-clr-2{
+    /* background: -webkit-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
+  background: -o-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
+  background: -moz-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%); */
+  background: linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
+}
+
+.wrapper-2{
+    box-shadow: 0 15px 17px -9px black;
+
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 2.5fr 1fr;
+
+    grid-template-rows: 0.5fr 1.2fr 2.5fr 01fr;
+
+    grid-template-areas: 
+    "food-name-2 food-name-2 food-name-2 food-name-2" 
+    "text-1-2 text-1-2 side-img-2 side-img-2" 
+    "text-1-2 text-1-2 side-img-2 side-img-2"
+    "down-img-2 down-img-2 down-img-2 down-img-2";
+    grid-gap: 15px;
+
+    /* FONT FAMILY */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+}
+
+/* COLOR: */
+
+h1{
+    text-decoration: underline;
+}
+
+.food-name-2{
+    grid-area: food-name-2;
+
+    text-align: center;
+}
+
+.side-img-2 {
+    box-shadow: 0 12px 9px -9px black;
+    
+    background-image: url("CHIOPPINO.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100%;
+    grid-area: side-img-2;
+
+    border-radius: 10px;
+}
+
+.text-1-2 {
+
+    grid-area: text-1-2;
+
+    border-radius: 10px;
+}
+
+.text-about-2 {
+
+    background-color: transparent;
+
+    /* box-shadow: 0 12px 9px -9px black; */
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* COLOR */
+
+@media only screen and (max-width: 500px){
+    .wrapper-2, body{
+        grid-gap: 5px;
+
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+
+        height: 100vh;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
+        grid-template-areas:
+        "food-name-2"
+        "side-img-2"
+        "text-1-2"
+        "down-img-2";
+    }
+} 
+
+
+
+#bk-clr-3{
+    /* background: -webkit-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
+  background: -o-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
+  background: -moz-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%); */
+  background: linear-gradient(110deg, #dddddd 60%, #81b97c 60%)
+
+}
+
+.wrapper-3{
+    
+    box-shadow: 0 15px 17px -9px black;
+
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2.5fr 1fr 1fr;
+
+    grid-template-rows: 0.5fr 2.5fr 1.2fr 01fr;
+
+    grid-template-areas: 
+    "food-name-3 food-name-3 food-name-3 food-name-3" 
+    "side-img-3 side-img-3 text-1-2-3 text-1-2-3" 
+    "side-img-3 side-img-3 text-1-2-3 text-1-2-3"
+    "down-img-3 down-img-3 down-img-3 down-img-3";
+    grid-gap: 15px;
+
+    /* FONT FAMILY */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: black;
+}
+
+/* COLOR: */
+
+h1{
+    text-decoration: underline;
+}
+
+.food-name-3{
+    grid-area: food-name-3;
+
+    text-align: center;
+}
+
+.side-img-3 {
+    box-shadow: 0 12px 9px -9px black;
+    
+    background-image: url("somtam.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100%;
+    grid-area: side-img-3;
+
+    border-radius: 10px;
+    
+}
+
+.text-1-2-3 {
+
+    grid-area: text-1-2-3;
+
+    border-radius: 10px;
+
+}
+
+.text-about-3 {
+
+    background-color: transparent;
+
+    /* box-shadow: 0 12px 9px -9px black; */
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* COLOR */
+
+@media only screen and (max-width: 500px){
+    .wrapper-3, body{
+        
+        grid-gap: 5px;
+
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+        margin-left: 0.75px !important;
+        margin-right: 0.75px !important;
+
+        height: 100vh;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
+        grid-template-areas:
+        "food-name-3"
+        "side-img-3"
+        "text-1-2-3"
+        "down-img-3";
+    }
+} 
+
+
+/* footer */
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: black;
+    background-color: white;
+}
+
+.footer > * {
+    flex: 1 100%;
+}
+
+.footer-left {
+    margin-right: 1.25rem;
+    margin-bottom: 2em;
+}
+
+.footer-left img {
+    width: 50%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer ul{
+    list-style:none ;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-felx;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.footer-box a{
+    color: #999;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+}
+
+.footer-left p{
+    padding-right: 20%;
+    color: #999;
+}
+
+.socials a {
+    background:#364a62 ;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials a i{
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+  
+@media screen and (min-width: 720px) {
+    .footer-right > * {
+        flex: 1;
+    }
+    .footer-left{
+        flex: 1 0px
+    }
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+
+@media (max-width: 720px){
+    .footer{
+        padding: 15px;
+    }
+}
+/* footer */
