@@ -197,7 +197,7 @@ p {
 }
 
 .side-img {
-    background-image: url("Bilder/Logo_Lafood.png");
+    background-image: url("../Bilder/Logo_Lafood.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -286,7 +286,7 @@ h1 {
 }
 
 .side-img-2 {
-    background-image: url("Bilder/Pakorn.jpg");
+    background-image: url("../Bilder/Pakorn.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -365,7 +365,7 @@ h1 {
 }
 
 .side-img-3 {
-    background-image: url("Bilder/Junas.jpg");
+    background-image: url("../Bilder/Junas.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

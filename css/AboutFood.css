@@ -1,11 +1,12 @@
 body {
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     font-family: 'Quicksand', sans-serif;
 }
 
+
 /* header */
 
-a{
+a {
     cursor: pointer;
 }
 
@@ -14,7 +15,7 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .nav-container {
@@ -22,7 +23,7 @@ header {
     margin: auto;
 }
 
-.nav-checkbox{
+.nav-checkbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -91,13 +92,14 @@ header {
     left: 0;
     right: 0;
     transform-origin: right;
-    transform: scale(0,1);
+    transform: scale(0, 1);
     transition: transform ease-in-out 500ms;
 }
 
 .tab-content li a:hover::after {
     transform: scale(1, 1);
 }
+
 
 /* content */
 
@@ -114,7 +116,6 @@ header {
         grid-column: 3;
         padding-right: 10px;
     }
-
     .tab-content {
         display: grid;
         grid-template-columns: 1fr;
@@ -126,15 +127,14 @@ header {
         -o-transition: all ease-in-out 0.4s;
         -webkit-transition: all ease-in-out 0.4s;
     }
-
-    .nav-checkbox input:checked ~ .tab-content {
+    .nav-checkbox input:checked~.tab-content {
         max-height: 400px;
     }
-
     .tab-content li {
         padding: 10px 0;
     }
 }
+
 
 /* header */
 
@@ -142,138 +142,108 @@ header {
     /* background: -webkit-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
   background: -o-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
   background: -moz-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%); */
-  background: linear-gradient(180deg, #ffffff 60%, #2e446e 60%)
+    background: linear-gradient(180deg, #ffffff 60%, #2e446e 60%)
 }
 
-.wrapper{ 
+.wrapper {
     box-shadow: 0 15px 17px -9px black;
-
     margin-left: 3.5rem;
     margin-right: 3.5rem;
-
     display: grid;
     height: 100vh;
-    grid-template-columns:1fr 2.5fr 1fr 1fr;
-
+    grid-template-columns: 1fr 2.5fr 1fr 1fr;
     grid-template-rows: 0.5fr 2.5fr 1.2fr 01fr;
-
-    grid-template-areas: 
-    "food-name food-name food-name food-name" 
-    "side-img side-img text-1 text-1" 
-    "side-img side-img text-1 text-1"
-    "down-img down-img down-img down-img";
+    grid-template-areas: "food-name food-name food-name food-name" "side-img side-img text-1 text-1" "side-img side-img text-1 text-1" "down-img down-img down-img down-img";
     grid-gap: 15px;
-
     /* FONT FAMILY */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     font-size: 15px;
     color: black;
-
 }
+
 
 /* COLOR: */
 
-h1{
+h1 {
     text-decoration: underline;
-    font-family: Quicksand; font-size: 50px; 
-    font-style: normal; font-variant: normal; 
-    font-weight: 1000; line-height: 50px; 
-    
+    font-family: Quicksand;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 1000;
+    line-height: 50px;
 }
 
-p{
+p {
     font-weight: 25px;
 }
 
-.food-name{
+.food-name {
     grid-area: food-name;
-
     text-align: center;
 }
 
 .side-img {
-
     box-shadow: 0 12px 9px -9px black;
-    
-    background-image: url("tomyum2.jpg");
+    background-image: url("../Bilder/tomyum2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     max-height: 100%;
     grid-area: side-img;
-
     border-radius: 10px;
 }
 
 .text-1 {
-    
-    
     grid-area: text-1;
-
     border-radius: 10px;
 }
 
 .text-about {
     background-color: transparent;
-
     /* box-shadow: 0 12px 9px -9px black; */
-
     margin-left: 5px;
     margin-right: 5px;
 }
 
+
 /* COLOR */
 
-@media only screen and (max-width: 500px){
-    .wrapper, body{
+@media only screen and (max-width: 500px) {
+    .wrapper,
+    body {
         grid-gap: 5px;
-
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
-
         height: 100vh;
-
         grid-template-columns: 1fr;
         grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
-        grid-template-areas:
-        "food-name"
-        "side-img"
-        "text-1"
-        "down-img";
+        grid-template-areas: "food-name" "side-img" "text-1" "down-img";
     }
-} 
+}
 
-#bk-clr-2{
+#bk-clr-2 {
     /* background: -webkit-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
   background: -o-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
   background: -moz-linear-gradient(70deg, #36718d 40%, #5ac8fa 40%); */
-  background: linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
+    background: linear-gradient(70deg, #36718d 40%, #5ac8fa 40%);
 }
 
-.wrapper-2{
+.wrapper-2 {
     box-shadow: 0 15px 17px -9px black;
-
     margin-top: 1.5rem;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
-
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 2.5fr 1fr;
-
     grid-template-rows: 0.5fr 1.2fr 2.5fr 01fr;
-
-    grid-template-areas: 
-    "food-name-2 food-name-2 food-name-2 food-name-2" 
-    "text-1-2 text-1-2 side-img-2 side-img-2" 
-    "text-1-2 text-1-2 side-img-2 side-img-2"
-    "down-img-2 down-img-2 down-img-2 down-img-2";
+    grid-template-areas: "food-name-2 food-name-2 food-name-2 food-name-2" "text-1-2 text-1-2 side-img-2 side-img-2" "text-1-2 text-1-2 side-img-2 side-img-2" "down-img-2 down-img-2 down-img-2 down-img-2";
     grid-gap: 15px;
-
     /* FONT FAMILY */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
@@ -281,103 +251,78 @@ p{
     color: black;
 }
 
+
 /* COLOR: */
 
-h1{
+h1 {
     text-decoration: underline;
 }
 
-.food-name-2{
+.food-name-2 {
     grid-area: food-name-2;
-
     text-align: center;
 }
 
 .side-img-2 {
     box-shadow: 0 12px 9px -9px black;
-    
-    background-image: url("CHIOPPINO.jpg");
+    background-image: url("../Bilder/CHIOPPINO.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     max-height: 100%;
     grid-area: side-img-2;
-
     border-radius: 10px;
 }
 
 .text-1-2 {
-
     grid-area: text-1-2;
-
     border-radius: 10px;
 }
 
 .text-about-2 {
-
     background-color: transparent;
-
     /* box-shadow: 0 12px 9px -9px black; */
-
     margin-left: 5px;
     margin-right: 5px;
 }
 
+
 /* COLOR */
 
-@media only screen and (max-width: 500px){
-    .wrapper-2, body{
+@media only screen and (max-width: 500px) {
+    .wrapper-2,
+    body {
         grid-gap: 5px;
-
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
-
         height: 100vh;
-
         grid-template-columns: 1fr;
         grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
-        grid-template-areas:
-        "food-name-2"
-        "side-img-2"
-        "text-1-2"
-        "down-img-2";
+        grid-template-areas: "food-name-2" "side-img-2" "text-1-2" "down-img-2";
     }
-} 
+}
 
-
-
-#bk-clr-3{
+#bk-clr-3 {
     /* background: -webkit-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
   background: -o-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%);
   background: -moz-linear-gradient(110deg, #3b7ffd 60%, #2c5ebb 60%); */
-  background: linear-gradient(110deg, #dddddd 60%, #81b97c 60%)
-
+    background: linear-gradient(110deg, #dddddd 60%, #81b97c 60%)
 }
 
-.wrapper-3{
-    
+.wrapper-3 {
     box-shadow: 0 15px 17px -9px black;
-
     margin-top: 1.5rem;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
-
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 2.5fr 1fr 1fr;
-
     grid-template-rows: 0.5fr 2.5fr 1.2fr 01fr;
-
-    grid-template-areas: 
-    "food-name-3 food-name-3 food-name-3 food-name-3" 
-    "side-img-3 side-img-3 text-1-2-3 text-1-2-3" 
-    "side-img-3 side-img-3 text-1-2-3 text-1-2-3"
-    "down-img-3 down-img-3 down-img-3 down-img-3";
+    grid-template-areas: "food-name-3 food-name-3 food-name-3 food-name-3" "side-img-3 side-img-3 text-1-2-3 text-1-2-3" "side-img-3 side-img-3 text-1-2-3 text-1-2-3" "down-img-3 down-img-3 down-img-3 down-img-3";
     grid-gap: 15px;
-
     /* FONT FAMILY */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
@@ -385,79 +330,66 @@ h1{
     color: black;
 }
 
+
 /* COLOR: */
 
-h1{
+h1 {
     text-decoration: underline;
 }
 
-.food-name-3{
+.food-name-3 {
     grid-area: food-name-3;
-
     text-align: center;
 }
 
 .side-img-3 {
     box-shadow: 0 12px 9px -9px black;
-    
-    background-image: url("somtam.jpg");
+    background-image: url("../Bilder/somtam.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     max-height: 100%;
     grid-area: side-img-3;
-
     border-radius: 10px;
-    
 }
 
 .text-1-2-3 {
-
     grid-area: text-1-2-3;
-
     border-radius: 10px;
-
 }
 
 .text-about-3 {
-
     background-color: transparent;
-
     /* box-shadow: 0 12px 9px -9px black; */
-
     margin-left: 5px;
     margin-right: 5px;
 }
 
+
 /* COLOR */
 
-@media only screen and (max-width: 500px){
-    .wrapper-3, body{
-        
+@media only screen and (max-width: 500px) {
+    .wrapper-3,
+    body {
         grid-gap: 5px;
-
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
         margin-left: 0.75px !important;
         margin-right: 0.75px !important;
-
         height: 100vh;
-
         grid-template-columns: 1fr;
         grid-template-rows: 0fr 1.5fr 0.25fr 1fr;
-        grid-template-areas:
-        "food-name-3"
-        "side-img-3"
-        "text-1-2-3"
-        "down-img-3";
+        grid-template-areas: "food-name-3" "side-img-3" "text-1-2-3" "down-img-3";
     }
-} 
+}
 
 
 /* footer */
 
-*,*:before,*:after{
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -473,7 +405,7 @@ footer {
     background-color: white;
 }
 
-.footer > * {
+.footer>* {
     flex: 1 100%;
 }
 
@@ -491,8 +423,8 @@ h2 {
     font-size: 17px;
 }
 
-.footer ul{
-    list-style:none ;
+.footer ul {
+    list-style: none;
     padding-left: 0;
 }
 
@@ -513,12 +445,12 @@ h2 {
     flex-flow: row wrap;
 }
 
-.footer-right > *{
+.footer-right>* {
     flex: 1 50%;
     margin-right: 1.25em;
 }
 
-.footer-box a{
+.footer-box a {
     color: #999;
 }
 
@@ -528,40 +460,42 @@ h2 {
     padding-top: 50px;
 }
 
-.footer-left p{
+.footer-left p {
     padding-right: 20%;
     color: #999;
 }
 
 .socials a {
-    background:#364a62 ;
+    background: #364a62;
     width: 40px;
     height: 40px;
     display: inline-block;
     margin-right: 10px;
 }
 
-.socials a i{
+.socials a i {
     color: #e7f2f4;
     padding: 10px 12px;
     font-size: 20px;
 }
-  
+
 @media screen and (min-width: 720px) {
-    .footer-right > * {
+    .footer-right>* {
         flex: 1;
     }
-    .footer-left{
+    .footer-left {
         flex: 1 0px
     }
-    .footer-right{
+    .footer-right {
         flex: 2 0px;
     }
 }
 
-@media (max-width: 720px){
-    .footer{
+@media (max-width: 720px) {
+    .footer {
         padding: 15px;
     }
 }
+
+
 /* footer */
