@@ -1,0 +1,385 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.5;
+    margin: 0;
+    color: white;
+}
+
+
+/* Nav */
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+}
+
+.nav-container {
+    width: 1280px;
+    margin: auto;
+}
+
+.nav-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.tab-nav {
+    outline: none;
+    display: none;
+}
+
+.tab-nav-label {
+    display: none;
+    background-color: transparent;
+}
+
+.tab-content {
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-content li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.tab-content li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.tab-content li a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+
+.tab-content li a:hover::before {
+    transform: scale(1, 1);
+}
+
+.tab-content li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+
+.tab-content li a:hover::after {
+    transform: scale(1, 1);
+}
+
+
+/* content */
+
+@media screen and (max-width: 1280px) {
+    .nav-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tab-nav-label {
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .tab-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.4s;
+        -o-transition: all ease-in-out 0.4s;
+        -webkit-transition: all ease-in-out 0.4s;
+    }
+    .nav-checkbox input:checked~.tab-content {
+        max-height: 400px;
+    }
+    .tab-content li {
+        padding: 10px 0;
+    }
+}
+
+
+/* header */
+
+#fancy-form {
+    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+}
+
+#fancy-form .container {
+    overflow: hidden;
+}
+
+.form-section {
+    margin-top: 5rem;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.from-left h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.from-left h4 {
+    color: beige;
+    margin: 0;
+    padding: 0;
+}
+
+.line {
+    border-bottom: 2px solid aqua;
+    width: 7%;
+    margin-left: 0;
+}
+
+.from-left span {
+    color: aqua;
+    font-weight: bold;
+}
+
+.from-left hr {
+    width: 25rem;
+    margin-left: 0;
+    border: 1px solid aqua
+}
+
+.form-right h1 {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    padding-top: 2rem;
+}
+
+.form h5 {
+    padding: 0;
+    margin: 0;
+    color: rgb(228, 218, 218);
+}
+
+.form-right input {
+    padding: 0.6rem;
+    width: 27rem;
+    border: none;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.form-right textarea {
+    padding: 0.6rem;
+    width: 27rem;
+    border: none;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.form-right button {
+    width: 9rem;
+    background: aqua;
+    padding: 5px;
+    outline: none;
+    border-color: transparent;
+    color: white;
+    font-size: 15;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 0.9rem;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 968px) {
+    #fancy-form .form-section {
+        display: block;
+        width: 50%;
+        text-align: left;
+    }
+    #fancy-form {
+        background: rgba(0, 0, 0, 0.5);
+        background-size: cover;
+        background-position: center;
+        height: 150vh;
+        width: 100%;
+    }
+    .form-section .form-right {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* footer */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: black;
+    background-color: white;
+}
+
+.footer>* {
+    flex: 1 100%;
+}
+
+.footer-left {
+    margin-right: 1.25rem;
+    margin-bottom: 2em;
+}
+
+.footer-left img {
+    width: 50%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer img {
+    width: 110px;
+    height: 110px;
+}
+
+.footer li {
+    line-height: 2rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-felx;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-right>* {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.footer-box a {
+    color: #999;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+}
+
+.footer-left p {
+    padding-right: 20%;
+    color: #999;
+}
+
+.socials a {
+    background: #364a62;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials a i {
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-right>* {
+        flex: 1;
+    }
+    .footer-left {
+        flex: 1 0px
+    }
+    .footer-right {
+        flex: 2 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+}
+
+
+/* footer */
